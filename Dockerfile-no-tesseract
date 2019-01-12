@@ -1,0 +1,20 @@
+FROM alpine
+WORKDIR /data
+
+COPY ./bash ./kit/docker-dependencies/* /bin/
+
+RUN source /bin/proxify.sh
+
+RUN apk add --no-cache \
+git \
+bash \
+curl \
+entr \
+perl \
+file \
+ffmpeg \
+# tesseract costs additional ~100MB. if `ocr`
+# command is not used, exclude tesseract-ocr from
+# docker build to save some space.
+# tesseract-ocr \
+imagemagick imagemagick-dev
