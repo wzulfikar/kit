@@ -20,14 +20,16 @@ docker run -it --rm wzulfikar/kit qotd
 docker run -it --rm -v $(pwd):/data wzulfikar/kit crop raspberry-pi-pinout.png 10x10+0+0
 ```
 
-to shorten the command, use alias:
+to shorten the command, create a function:
 
 ```
 # add below snippet to your profile (ie. ~/.bashrc)
-alias kit="docker run -it --rm -v $(pwd):/data wzulfikar/kit "
+kit() {
+  docker run -it --rm -v $(pwd):/data wzulfikar/kit $@
+}
 ```
 
-once the alias is created, you can execute programs available inside the kit from this command:
+once `kit` function is created, you can execute programs available inside the kit using this command:
 
 ```
 kit <command name>
