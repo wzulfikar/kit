@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# kat shows the content of README file using `less`,
+# essentially serving similar function as "man" command.
+less /README.md
