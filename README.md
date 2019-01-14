@@ -52,3 +52,14 @@ You can see the content of `Dockerfile` for a complete list of what inside the k
   - etc.
 - harvest
 - photon
+
+## Build Your Own KIT
+
+If you want to specify which executables goes into the image, you can customize it by pulling the `lab` submodule. To do so, clone the `lab` repo and make it available at `./kit/lab`. Or, if you haven't cloned the kit repo itself (this repo), you can clone it recursively:
+
+```
+# clone repo and its submodules
+git clone --recursive https://github.com/wzulfikar/kit
+```
+
+Once you cloned the repo and its submodule (check that `lab/` directory is not empty), you can start building the docker image: `make build`

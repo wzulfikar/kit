@@ -34,4 +34,4 @@ push:
 
 # synchronize lab with upstream
 sync:
-	cd lab && git pull && cd -
+	cd lab && git pull origin master && cd -
