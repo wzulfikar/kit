@@ -1,3 +1,7 @@
+CURRENT_DIR=$(shell pwd)
+
+.PHONY: docker-dependencies
+
 build-all: build build-no-tesseract
 
 build:
@@ -19,6 +23,11 @@ build-no-tesseract:
 		-t wzulfikar/kit:no-tesseract \
 		-f Dockerfile-no-tesseract \
 		.
+
+docker-dependencies:
+	# build ytdl
+	cd ${GOPATH}/src/github.com/rylio/ytdl/cmd/ytdl && \
+	GOOS=linux GOARCH=amd64 go build -o ${CURRENT_DIR}/docker-dependencies/ytdl .
 
 push:
 	docker push wzulfikar/kit

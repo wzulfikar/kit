@@ -14,6 +14,7 @@ file \
 nmap \
 perl \
 ngrep \
+socat \
 ffmpeg \
 python3 \
 apache2-utils \
