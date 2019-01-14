@@ -52,6 +52,7 @@ You can see the content of `Dockerfile` for a complete list of what inside the k
   - etc.
 - harvest
 - photon
+- etc.
 
 ## Build Your Own KIT
 

@@ -23,6 +23,7 @@ perl \
 ngrep \
 socat \
 ffmpeg \
+openssl \
 apache2-utils \
 
 # tesseract costs additional ~100MB. if `ocr`
